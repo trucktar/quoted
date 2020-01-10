@@ -1,1 +1,12 @@
-<p>quote-detail works!</p>
+<span class="author">by {{ quote.author }}</span>
+<hr />
+<div class="d-flex justify-content-between">
+  <div class="vote d-flex align-items-center">
+    <i class="upvote fa fa-caret-up mr-3">&nbsp;200</i>
+    <i class="downvote fa fa-caret-down mr-3">&nbsp;100</i>
+  </div>
+  <div class="text-right">
+    <span class="created">created Jun 8 '15 at 4:17</span><br />
+    <span class="creator">by {{ quote.creator }}</span>
+  </div>
+</div>
