@@ -1,3 +1,7 @@
 <div class="quote" *ngFor="let quote of quotes">
-  <span class="text">“{{ quote.text }}”</span>
+  <div class="d-flex justify-content-between">
+    <span class="text">“{{ quote.text }}”</span>
+    <i class="fa fa-trash pt-1"></i>
+  </div>
+  <app-quote-detail [quote]="quote"></app-quote-detail>
 </div>
