@@ -11,22 +11,26 @@ export class QuoteComponent implements OnInit {
     new Quote(
       "The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.",
       "Albert Einstein",
-      "Nyota Mwangi"
+      "Nyota Mwangi",
+      new Date(2020, 3, 14)
     ),
     new Quote(
       "It is our choices, Harry, that show what we truly are, far more than our abilities.",
       "J.K. Rowling",
-      "Nduta Mwangi"
+      "Nduta Mwangi",
+      new Date(2019, 6, 9)
     ),
     new Quote(
       "There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.",
       "Albert Einstein",
-      "Nyambura Mwangi"
+      "Nyambura Mwangi",
+      new Date(2022, 1, 12)
     ),
     new Quote(
       "The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.",
       "Jane Austen",
-      "Lenny Dennis"
+      "Lenny Dennis",
+      new Date(2019, 0, 18)
     )
   ];
   constructor() {}
