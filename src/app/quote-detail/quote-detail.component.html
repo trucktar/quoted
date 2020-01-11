@@ -6,7 +6,8 @@
     <i class="downvote fa fa-caret-down mr-3">&nbsp;100</i>
   </div>
   <div class="text-right">
-    <span class="created">created Jun 8 '15 at 4:17</span><br />
+    <span class="created">created {{ quote.datePosted | date }}</span
+    ><br />
     <span class="creator">by {{ quote.creator }}</span>
   </div>
 </div>
