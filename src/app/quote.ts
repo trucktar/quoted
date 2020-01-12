@@ -3,6 +3,6 @@ export class Quote {
     public text: string,
     public author: string,
     public creator: string,
-    public datePosted: Date
+    public datePosted: Date = new Date()
   ) {}
 }
