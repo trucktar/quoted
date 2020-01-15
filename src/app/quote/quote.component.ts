@@ -15,7 +15,7 @@ export class QuoteComponent implements OnInit {
       "The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.",
       "Albert Einstein",
       "Nyota Mwangi",
-      new Date(2020, 3, 14)
+      new Date(2019, 3, 14)
     ),
     new Quote(
       "It is our choices, Harry, that show what we truly are, far more than our abilities.",
@@ -27,7 +27,7 @@ export class QuoteComponent implements OnInit {
       "There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.",
       "Albert Einstein",
       "Nyambura Mwangi",
-      new Date(2022, 1, 12)
+      new Date(2019, 1, 12)
     ),
     new Quote(
       "The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.",
