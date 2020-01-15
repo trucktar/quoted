@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { FormBuilder } from "@angular/forms";
+import { FormBuilder, Validators, FormGroup } from "@angular/forms";
 import { QuotesService } from "../quotes.service";
 
 import { Quote } from "../quote";
@@ -11,11 +11,21 @@ import { Quote } from "../quote";
 })
 export class QuoteFormComponent implements OnInit {
   quote: Quote;
-  quoteForm = this.fb.group({
-    quoteText: "",
-    quoteAuthor: "",
-    quoteCreator: ""
+  quoteForm: FormGroup = this.fb.group({
+    quoteText: ["", Validators.required],
+    quoteAuthor: ["", Validators.required],
+    quoteCreator: ["", Validators.required]
   });
+
+  get quoteText() {
+    return this.quoteForm.get("quoteText");
+  }
+  get quoteAuthor() {
+    return this.quoteForm.get("quoteAuthor");
+  }
+  get quoteCreator() {
+    return this.quoteForm.get("quoteCreator");
+  }
 
   onSubmit(quoteDetails) {
     let { quoteText, quoteAuthor, quoteCreator } = quoteDetails;
@@ -25,8 +35,7 @@ export class QuoteFormComponent implements OnInit {
     this.quoteForm.reset();
   }
 
-  constructor(public fb: FormBuilder, public qs: QuotesService) {}
+  constructor(private fb: FormBuilder, public qs: QuotesService) {}
 
   ngOnInit() {}
-  
 }
