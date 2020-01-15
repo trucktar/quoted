@@ -1,27 +1,43 @@
 # Quoted
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+This project demonstrates the use of Angular to build a simple webapp. Here users can create quotes and have them voted on.
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Quoted displays previously posted quotes and allows for the creation and deletion of quotes. Each quote can be upvoted or downvoted.
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To get a local copy up and running follow these simple steps:
 
-## Build
+1. Clone the repository
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```sh
+git clone https://github.com/trucktar/quoted.git
+```
 
-## Running unit tests
+2. Navigate to the project's parent directory
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+cd quoted/
+```
 
-## Running end-to-end tests
+3. Set up project environment and serve application
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```sh
+npm install/
+ng serve --open
+```
 
-## Further help
+## Usage
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Use the displayed form to create a new quote. To vote on a specific quote, find the caret-up and caret-down icons. On click, the upvote or downvote count should increase. The trash icon provides a means to delete a quote.
+
+## Contact
+
+Nyota Mwangi - [@trucktar](https://twitter.com/trucktar) - nyota.benjamin@gmail.com  
+Project Link: [https://trucktar.github.io/quoted/](https://trucktar.github.io/quoted/)
+
+## License
+
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
