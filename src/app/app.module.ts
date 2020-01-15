@@ -8,6 +8,7 @@ import { QuoteComponent } from "./quote/quote.component";
 import { QuoteDetailComponent } from "./quote-detail/quote-detail.component";
 import { QuoteFormComponent } from "./quote-form/quote-form.component";
 import { HighlightDirective } from './highlight.directive';
+import { QuotesService } from './quotes.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { HighlightDirective } from './highlight.directive';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [QuotesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
