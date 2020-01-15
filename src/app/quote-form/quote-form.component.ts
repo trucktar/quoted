@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder } from "@angular/forms";
+import { QuotesService } from "../quotes.service";
 
 import { Quote } from "../quote";
 
@@ -18,12 +19,14 @@ export class QuoteFormComponent implements OnInit {
 
   onSubmit(quoteDetails) {
     let { quoteText, quoteAuthor, quoteCreator } = quoteDetails;
-    this.quote = new Quote(quoteText, quoteAuthor, quoteCreator);
-    
+    let newQuote = new Quote(quoteText, quoteAuthor, quoteCreator);
+
+    this.qs.publishQuote(newQuote);
     this.quoteForm.reset();
   }
 
-  constructor(public fb: FormBuilder) {}
+  constructor(public fb: FormBuilder, public qs: QuotesService) {}
 
   ngOnInit() {}
+  
 }
