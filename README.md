@@ -25,7 +25,7 @@ cd quoted/
 3. Set up project environment and serve application
 
 ```sh
-npm install/
+npm install
 ng serve --open
 ```
 
