@@ -1,5 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
+import { QuotesService } from "../quotes.service";
 import { Quote } from "../quote";
+import { Subscription } from "rxjs";
 
 @Component({
   selector: "app-quote",
@@ -7,6 +9,7 @@ import { Quote } from "../quote";
   styleUrls: ["./quote.component.css"]
 })
 export class QuoteComponent implements OnInit {
+  subscription: Subscription;
   quotes: Quote[] = [
     new Quote(
       "The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.",
@@ -41,7 +44,16 @@ export class QuoteComponent implements OnInit {
       this.quotes.splice(index, 1);
     }
   }
-  constructor() {}
+  constructor(private qs: QuotesService) {
+    this.subscription = qs.quoteCreated$.subscribe(quote => {
+      this.quotes.unshift(quote);
+    });
+  }
 
   ngOnInit() {}
+
+  ngOnDestroy() {
+    // prevent memory leak when component destroyed
+    this.subscription.unsubscribe();
+  }
 }
